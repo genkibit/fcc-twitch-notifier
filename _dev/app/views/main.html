@@ -1,0 +1,35 @@
+<div id="app-panel" ng-controller="MainCtrl" ng-mousemove="main.autoUpdate()">
+  <section id="filter-panel">
+    <h4 class="sr-only">Channel Filters</h4>
+    <div data-toggle="buttons">
+      <input id="search-bar" type="text" autocomplete="off" ng-model="main.search" ng-change="main.removeSpaces()" placeholder="Query">
+      <label class="btn btn-default active" id="all" ng-click="main.all()">
+        <input type="radio" autocomplete="off" checked><i class="glyphicon glyphicon-asterisk"></i><span class="sr-only">All</span>
+      </label>
+      <label class="btn btn-default" id="online" ng-click="main.online()">
+        <input type="radio" autocomplete="off"><i class="glyphicon glyphicon-facetime-video"></i><span class="sr-only">Online</span>
+      </label>
+      <label class="btn btn-default" id="offline" ng-click="main.offline()">
+        <input type="radio" autocomplete="off"><i class="glyphicon glyphicon-remove"></i><span class="sr-only">Offline</span>
+      </label>
+      <button class="btn btn-default" type="button" ng-click="main.refresh()"><i class="glyphicon glyphicon-refresh"></i><span class="sr-only">Refresh</span></button>
+    </div>
+  </section>
+  <div id="twitch-logo">
+    <a href="https://www.twitch.tv/">
+      <img src="https://dl.dropboxusercontent.com/u/3810405/freecodecamp/twitch-tv/Twitch_BlackLogoURL.png">
+    </a>  
+  </div>  
+  <section id="channel-list" ng-repeat="item in main.results | filter:main.category">
+    <h4 class="sr-only">Twitch Channel List</h4>
+    <a ng-class="hover-effect" href="{{ item.url }}">
+      <dl >
+        <img class="{{ item.bg }}" ng-if="item.logo" ng-src="{{ item.logo }}">
+        <article>
+          <dt>{{ item.name }}</dt>
+          <dd ng-if="item.status">{{ item.status | limitTo: 50 }} {{ item.status.length > 50 ? '...' : '' }}</dd>
+        </article>
+      </dl>
+    </a>
+  </section>
+</div>
