@@ -10,7 +10,7 @@ body {
   font-size: 18px;
   font-size: 1rem;
   background-color: #ccc;
-  background-image: url("https://dl.dropboxusercontent.com/u/3810405/freecodecamp/twitch-tv/shattered.png");
+  background-image: url("../assets/icons/twitch/shattered.png");
 }
 
 .browsehappy {

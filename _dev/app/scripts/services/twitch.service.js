@@ -55,7 +55,7 @@ appModule.factory('twitchSvc', ['$rootScope', '$log', '$http', '$q', function($r
             if (res.status === 404 || res.status === 422) {
               return {
                 name: ch,
-                logo: 'https://dl.dropboxusercontent.com/u/3810405/freecodecamp/twitch-tv/orange-warning-icon-3.png',
+                logo: 'assets/icons/twitch/orange-warning-icon-3.png',
                 status: 'Invalid channel',
                 url: 'https://www.twitch.tv/',
                 bg: 'invalid'
@@ -64,7 +64,7 @@ appModule.factory('twitchSvc', ['$rootScope', '$log', '$http', '$q', function($r
             else if (res.error) {
               return {
                 name: ch,
-                logo: 'https://dl.dropboxusercontent.com/u/3810405/freecodecamp/twitch-tv/orange-warning-icon-3.png',
+                logo: 'assets/icons/twitch/orange-warning-icon-3.png',
                 status: res.error,
                 bg: 'invalid'
               }
