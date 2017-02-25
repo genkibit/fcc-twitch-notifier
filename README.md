@@ -52,5 +52,7 @@ Code provided under an **[MIT license](https://github.com/genkibit/fcc-twitch-no
 
 Changelog
 ---
-+  20160917 -- v1.0.0
++ 20160917 -- v1.0.0
 	- Initial release.
++ 20170225 -- v2.0.0
+  - Moved icons to local directory.
