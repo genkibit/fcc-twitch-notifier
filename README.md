@@ -20,7 +20,7 @@ The project rubric is as follows:
 
 App Link
 ---
-Access the page **[here](http://genkibit.github.io/fcc-twitch-notifier/)**.
+Access the page **[here](http://noelnoche.github.io/fcc-twitch-notifier/)**.
 
 
 Testing
@@ -47,7 +47,7 @@ version 0.15.1
 
 License
 ---
-Code provided under an **[MIT license](https://github.com/genkibit/fcc-twitch-notifier/blob/gh-pages/LICENSE.md)**
+Code provided under an **[MIT license](https://github.com/noelnoche/fcc-twitch-notifier/blob/gh-pages/LICENSE.md)**
 
 
 Changelog
